@@ -1,99 +1,65 @@
-/* 
+/*
 
-An Old Hope – Star Wars Syntax (c) Gustavo Costa <gusbemacbe@gmail.com>
-Original theme - Ocean Dark Theme – by https://github.com/gavsiu
-Based on Jesse Leite's Atom syntax theme 'An Old Hope' – https://github.com/JesseLeite/an-old-hope-syntax-atom
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 
 */
 
-/* Death Star Comment */
-
-.hljs-comment,
-.hljs-quote 
-{
-  color: #B6B18B;
-}
-
-/* Darth Vader */
-
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion 
-{
-  color: #EB3C54;
-}
-
-/* Threepio */
-
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link 
-{
-  color: #E7CE56;
-}
-
-/* Luke Skywalker */
-
-.hljs-attribute 
-{
-  color: #EE7C2B;
-}
-
-/* Obi Wan Kenobi */
-
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition 
-{
-  color: #4FB4D7;
-}
-
-/* Yoda */
-
-.hljs-title,
-.hljs-section 
-{
-  color: #78BB65;
-}
-
-/* Mace Windu */
-
-.hljs-keyword,
-.hljs-selector-tag 
-{
-  color: #B45EA4;
-}
-
-/* Millenium Falcon */
-
-.hljs 
-{
+.hljs {
   display: block;
   overflow-x: auto;
-  background: #1C1D21;
-  color: #c0c5ce;
   padding: 0.5em;
+  background: #444;
 }
 
-.hljs-emphasis 
-{
-  font-style: italic;
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: white;
 }
 
-.hljs-strong 
-{
+.hljs,
+.hljs-subst {
+  color: #ddd;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #d88;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #777;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
   font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
