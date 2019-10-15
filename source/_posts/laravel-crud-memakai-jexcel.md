@@ -115,7 +115,7 @@ View di atas menggunakan template dari [laravolt/ui](https://github.com/laravolt
 
 Sampai disini, kita berhasil menampilkan data dalam bentuk spreadsheet menggunakan jExcel. Bukan hanya menampilkan, jExcel juga sudah menyediakan fungsi-fungsi layaknya excel seperti menambah/menghapus kolom dan row, mengedit data secara inline, hingga menyimpan data dalam format CSV. Semuanya tersedia tanpa perlu banyak koding. Maknyuss.
 
-![image-20191015115119884](../assets/uploads/image-20191015115119884-1115081.png)
+![image-20191015131247354](../assets/uploads/image-20191015131247354-1119970.png)
 
 
 
