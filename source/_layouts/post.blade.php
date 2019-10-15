@@ -16,17 +16,17 @@
 
     <p class="text-gray-600 text-base md:my-0">Ditulis oleh {{ $page->author }}  pada  {{ date('j F Y', $page->date) }}</p>
 
-    @if ($page->categories)
-        <div class="mb-10 mt-4">
-            @foreach ($page->categories as $i => $category)
-                <a
-                        href="{{ '/post/categories/' . $category }}"
-                        title="View posts in {{ $category }}"
-                        class="inline-block bg-gray-200 font-bold hover:bg-red-200 leading-loose tracking-wide text-gray-800 uppercase text-xs rounded mr-1 px-3 pt-px"
-                >{{ $category }}</a>
-            @endforeach
-        </div>
-    @endif
+{{--    @if ($page->categories)--}}
+{{--        <div class="mb-10 mt-4">--}}
+{{--            @foreach ($page->categories as $i => $category)--}}
+{{--                <a--}}
+{{--                        href="{{ '/post/categories/' . $category }}"--}}
+{{--                        title="View posts in {{ $category }}"--}}
+{{--                        class="inline-block bg-gray-200 font-bold hover:bg-red-200 leading-loose tracking-wide text-gray-800 uppercase text-xs rounded mr-1 px-3 pt-px"--}}
+{{--                >{{ $category }}</a>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    @endif--}}
 
     <hr>
 

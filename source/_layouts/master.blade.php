@@ -74,6 +74,9 @@
 
         <main role="main" class="flex-auto w-full container max-w-3xl mx-auto py-16 px-6">
             @yield('body')
+
+            @include('_components.newsletter-signup')
+
         </main>
 
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">

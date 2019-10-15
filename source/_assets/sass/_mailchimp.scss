@@ -16,18 +16,18 @@
     }
 
     @screen md {
-        @apply .w-2/3;
+        //@apply .w-2/3;
     }
 
     @screen lg {
-        @apply .w-1/2;
+        //@apply .w-1/2;
     }
 }
 
 #mc_embed_signup_scroll {
     > h2:first-of-type {
         @apply .block;
-        @apply .mb-6;
+        @apply .mb-1;
         @apply .text-2xl;
         @apply .text-center;
         @apply .text-gray-900;
