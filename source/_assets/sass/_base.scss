@@ -123,22 +123,6 @@ p {
     }
 }
 
-pre {
-    @apply .bg-gray-200;
-    @apply .leading-loose;
-    @apply .my-6;
-    @apply .overflow-x-auto;
-    @apply .p-4;
-    @apply .rounded;
-    @apply .shadow;
-    @apply .text-base;
-
-    code {
-        @apply .bg-transparent;
-        @apply .block;
-        @apply .p-0;
-    }
-}
 
 ::selection {
     @apply .bg-red-500;
