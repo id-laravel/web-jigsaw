@@ -1,4 +1,4 @@
-<div class="flex justify-center lg:-mx-12 my-12 py-6 px-20 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
+<div class="flex justify-center lg:-mx-12 my-12 py-6 px-6 md:px-20 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="//ngomik.us4.list-manage.com/subscribe/post?u=de381d4cdac3d2826f5e4df67&amp;id=ea69cd49d9"
