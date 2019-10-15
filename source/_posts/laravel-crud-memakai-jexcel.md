@@ -5,7 +5,6 @@ title: CRUD di Laravel Menggunakan jExcel
 categories: [laravel]
 date: 2019-10-15
 author: Bayu Hendra Winata
-typora-copy-images-to: ../../assets/uploads
 ---
 
 ## Apa Itu jExcel?
@@ -25,7 +24,7 @@ Semua contoh kode akan menggunakan jExcel v3 dan jQuery.
 
 Kita akan membuat sebuah CRUD sederhana untuk melakukan input data mobil dengan atribut merk dan harga. Isi tabel mobil bisa dilihat di bawah ini:
 
-![image-20191015114534137](../assets/uploads/image-20191015114534137-1114742.png)
+![image-20191015121557713](../assets/uploads/image-20191015121557713-1116567.png)
 
 Silakan buat migration dan seeder sendiri atau bisa mencoba hasil akhirnya di https://github.com/berbageek/jexcel-crud.
 
