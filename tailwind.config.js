@@ -11,6 +11,7 @@ module.exports = {
       },
     },
     fontSize: {
+      'xs': '.75rem',
       'sm': '1rem',
       'base': '1.25rem',
       'lg': '1.125rem',
@@ -19,7 +20,7 @@ module.exports = {
       '3xl': '1.75rem',
       '4xl': '2.125rem',
       '5xl': '2.625rem',
-      '6xl': '10rem',
+      '6xl': '4rem',
     },
   },
   variants: {

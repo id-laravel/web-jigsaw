@@ -740,17 +740,16 @@ body {
 }
 
 a {
-  font-weight: 600;
   text-decoration: none;
   color: #e53e3e;
 }
 
 a:hover {
-  color: #2c5282;
+  color: #c53030;
 }
 
 blockquote {
-  border-color: #63b3ed;
+  border-color: #fc8181;
   border-left-width: 4px;
   font-weight: 400;
   font-style: italic;
@@ -768,7 +767,7 @@ code {
   padding-top: 1px;
   padding-bottom: 1px;
   border-radius: 0.25rem;
-  font-size: 1rem;
+  font-size: .75rem;
 }
 
 code.hljs {
@@ -809,8 +808,15 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-weight: 800;
-  font-size: 2.625rem;
+  font-size: 2.125rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-weight: 800;
+    font-size: 4rem;
+  }
 }
 
 h2 {
@@ -840,7 +846,7 @@ h6 {
 
 hr {
   border-bottom-width: 1px;
-  border-color: #bee3f8;
+  border-color: #e53e3e;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border-radius: 9999px;
@@ -889,12 +895,12 @@ pre code {
 }
 
 ::-moz-selection {
-  background-color: #4299e1;
+  background-color: #f56565;
   color: #fff;
 }
 
 ::selection {
-  background-color: #4299e1;
+  background-color: #f56565;
   color: #fff;
 }
 
@@ -980,7 +986,7 @@ pre code {
 }
 
 #mc-embedded-subscribe {
-  background-color: #4299e1;
+  background-color: #f56565;
   cursor: pointer;
   line-height: 1.5;
   padding-left: 1.5rem;
@@ -994,7 +1000,7 @@ pre code {
 }
 
 #mc-embedded-subscribe:hover {
-  background-color: #3182ce;
+  background-color: #e53e3e;
 }
 
 @media (min-width: 768px) {
@@ -11688,6 +11694,10 @@ pre code {
   color: #702459;
 }
 
+.text-xs{
+  font-size: .75rem;
+}
+
 .text-sm{
   font-size: 1rem;
 }
@@ -11721,7 +11731,7 @@ pre code {
 }
 
 .text-6xl{
-  font-size: 10rem;
+  font-size: 4rem;
 }
 
 .italic{
@@ -23023,6 +23033,10 @@ pre code {
     color: #702459;
   }
 
+  .sm\:text-xs{
+    font-size: .75rem;
+  }
+
   .sm\:text-sm{
     font-size: 1rem;
   }
@@ -23056,7 +23070,7 @@ pre code {
   }
 
   .sm\:text-6xl{
-    font-size: 10rem;
+    font-size: 4rem;
   }
 
   .sm\:italic{
@@ -34351,6 +34365,10 @@ pre code {
     color: #702459;
   }
 
+  .md\:text-xs{
+    font-size: .75rem;
+  }
+
   .md\:text-sm{
     font-size: 1rem;
   }
@@ -34384,7 +34402,7 @@ pre code {
   }
 
   .md\:text-6xl{
-    font-size: 10rem;
+    font-size: 4rem;
   }
 
   .md\:italic{
@@ -45679,6 +45697,10 @@ pre code {
     color: #702459;
   }
 
+  .lg\:text-xs{
+    font-size: .75rem;
+  }
+
   .lg\:text-sm{
     font-size: 1rem;
   }
@@ -45712,7 +45734,7 @@ pre code {
   }
 
   .lg\:text-6xl{
-    font-size: 10rem;
+    font-size: 4rem;
   }
 
   .lg\:italic{
@@ -57007,6 +57029,10 @@ pre code {
     color: #702459;
   }
 
+  .xl\:text-xs{
+    font-size: .75rem;
+  }
+
   .xl\:text-sm{
     font-size: 1rem;
   }
@@ -57040,7 +57066,7 @@ pre code {
   }
 
   .xl\:text-6xl{
-    font-size: 10rem;
+    font-size: 4rem;
   }
 
   .xl\:italic{

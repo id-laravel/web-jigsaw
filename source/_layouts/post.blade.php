@@ -14,19 +14,23 @@
 
     <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    <p class="text-gray-700 text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-gray-600 text-base md:my-0">Ditulis oleh {{ $page->author }}  pada  {{ date('j F Y', $page->date) }}</p>
 
     @if ($page->categories)
-        @foreach ($page->categories as $i => $category)
-            <a
-                href="{{ '/blog/categories/' . $category }}"
-                title="View posts in {{ $category }}"
-                class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
-            >{{ $category }}</a>
-        @endforeach
+        <div class="mb-10 mt-4">
+            @foreach ($page->categories as $i => $category)
+                <a
+                        href="{{ '/post/categories/' . $category }}"
+                        title="View posts in {{ $category }}"
+                        class="inline-block bg-gray-200 font-bold hover:bg-red-200 leading-loose tracking-wide text-gray-800 uppercase text-xs rounded mr-1 px-3 pt-px"
+                >{{ $category }}</a>
+            @endforeach
+        </div>
     @endif
 
-    <div class="border-b border-blue-200 mb-10 pb-4" v-pre>
+    <hr>
+
+    <div class="border-b border-red-200 mb-10 pb-4" v-pre>
         @yield('content')
     </div>
 

@@ -11,12 +11,15 @@ return [
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'Perindu Hujan', // Default author, if not provided in a post
+            'author' => 'Artisan', // Default author, if not provided in a post
             'sort' => '-date',
-            'path' => 'blog/{filename}',
+            'path' => 'post/{filename}',
+            'posts' => function ($page, $allPosts) {
+                return [];
+            },
         ],
         'categories' => [
-            'path' => '/blog/categories/{filename}',
+            'path' => '/post/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
                     return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;

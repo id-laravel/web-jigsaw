@@ -13,6 +13,7 @@ pagination:
 @endpush
 
 @section('body')
+    <h1>Tutorial Laravel Bahasa Indonesia</h1>
     <p class="text-xl">
         ID Laravel menyajikan tutorial, tip praktis, dan info terbaru tentang Laravel dan PHP. Ditulis dalam bahasa Indonesia
         yang santai oleh para kontributor berpengalaman, semua artikel layak untuk dibaca hingga baris terakhir.
@@ -22,10 +23,6 @@ pagination:
 
     @foreach ($pagination->items as $post)
         @include('_components.post-basic')
-
-        @if ($post != $pagination->items->last())
-{{--            <hr class="border-b my-6">--}}
-        @endif
     @endforeach
 
     @if ($pagination->pages->count() > 1)
