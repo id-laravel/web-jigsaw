@@ -5,7 +5,7 @@ title: CRUD di Laravel Menggunakan jExcel
 categories: [laravel]
 date: 2019-10-15
 author: Bayu Hendra Winata
-typora-copy-images-to: ../assets/uploads
+typora-copy-images-to: ../../assets/uploads
 ---
 
 ## Apa Itu jExcel?
