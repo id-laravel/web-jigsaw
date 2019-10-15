@@ -31,7 +31,7 @@
     <hr>
 
     <div class="border-b border-red-200 mb-10 pb-4 markdown" v-pre>
-        @yield('content')
+        {!! $page->content !!}
     </div>
 
     <nav class="flex justify-between text-sm md:text-base">
