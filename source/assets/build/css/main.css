@@ -1,17 +1,20 @@
-/* a11y-light theme */
+/* 
 
-/* Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css */
+An Old Hope – Star Wars Syntax (c) Gustavo Costa <gusbemacbe@gmail.com>
+Original theme - Ocean Dark Theme – by https://github.com/gavsiu
+Based on Jesse Leite's Atom syntax theme 'An Old Hope' – https://github.com/JesseLeite/an-old-hope-syntax-atom
 
-/* @author: ericwbailey */
+*/
 
-/* Comment */
+/* Death Star Comment */
 
 .hljs-comment,
-.hljs-quote {
-  color: #696969;
+.hljs-quote 
+{
+  color: #B6B18B;
 }
 
-/* Red */
+/* Darth Vader */
 
 .hljs-variable,
 .hljs-template-variable,
@@ -20,11 +23,12 @@
 .hljs-selector-id,
 .hljs-selector-class,
 .hljs-regexp,
-.hljs-deletion {
-  color: #d91e18;
+.hljs-deletion 
+{
+  color: #EB3C54;
 }
 
-/* Orange */
+/* Threepio */
 
 .hljs-number,
 .hljs-built_in,
@@ -33,78 +37,63 @@
 .hljs-type,
 .hljs-params,
 .hljs-meta,
-.hljs-link {
-  color: #aa5d00;
+.hljs-link 
+{
+  color: #E7CE56;
 }
 
-/* Yellow */
+/* Luke Skywalker */
 
-.hljs-attribute {
-  color: #aa5d00;
+.hljs-attribute 
+{
+  color: #EE7C2B;
 }
 
-/* Green */
+/* Obi Wan Kenobi */
 
 .hljs-string,
 .hljs-symbol,
 .hljs-bullet,
-.hljs-addition {
-  color: #008000;
+.hljs-addition 
+{
+  color: #4FB4D7;
 }
 
-/* Blue */
+/* Yoda */
 
 .hljs-title,
-.hljs-section {
-  color: #007faa;
+.hljs-section 
+{
+  color: #78BB65;
 }
 
-/* Purple */
+/* Mace Windu */
 
 .hljs-keyword,
-.hljs-selector-tag {
-  color: #7928a1;
+.hljs-selector-tag 
+{
+  color: #B45EA4;
 }
 
-.hljs {
+/* Millenium Falcon */
+
+.hljs 
+{
   display: block;
   overflow-x: auto;
-  background: #fefefe;
-  color: #545454;
+  background: #1C1D21;
+  color: #c0c5ce;
   padding: 0.5em;
 }
 
-.hljs-emphasis {
+.hljs-emphasis 
+{
   font-style: italic;
 }
 
-.hljs-strong {
+.hljs-strong 
+{
   font-weight: bold;
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .hljs-addition,
-  .hljs-attribute,
-  .hljs-built_in,
-  .hljs-builtin-name,
-  .hljs-bullet,
-  .hljs-comment,
-  .hljs-link,
-  .hljs-literal,
-  .hljs-meta,
-  .hljs-number,
-  .hljs-params,
-  .hljs-string,
-  .hljs-symbol,
-  .hljs-type,
-  .hljs-quote {
-    color: highlight;
-  }
-
-  .hljs-keyword,
-    .hljs-selector-tag {
-    font-weight: bold;
-  }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -1001,6 +990,209 @@ pre code {
   #mc-embedded-subscribe {
     width: 25%;
   }
+}
+
+.markdown .hljs {
+  color: #f7fafc;
+  padding: 0.5rem;
+}
+
+.markdown .hljs-comment {
+  color: #718096;
+}
+
+.markdown .language-html .hljs-attr {
+  color: #ff9800;
+}
+
+.markdown h1 {
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.markdown h1:first-child {
+  margin-top: 1.5rem;
+}
+
+.markdown h2 {
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.markdown h2:first-child {
+  margin-top: 1.5rem;
+}
+
+.markdown h3 {
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.markdown h3:first-child {
+  margin-top: 1.5rem;
+}
+
+.markdown h5 {
+  color: #5a67d8;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.markdown h6 {
+  background: #1C1D21;
+  color: #7f8ea5;
+  padding: 1em;
+  border-bottom: 1px solid #111;
+  font-size: 0.75em;
+  font-weight: 500;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.markdown h4 + p {
+  margin-top: 0.75rem;
+}
+
+.markdown h5 + p {
+  margin-top: 0.5rem;
+}
+
+.markdown hr {
+  border-width: 1px;
+  border-color: #a0aec0;
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.markdown img {
+  max-width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.25rem;
+}
+
+.markdown p {
+  line-height: 1.5;
+}
+
+.markdown blockquote {
+  background-color: #ebf4ff;
+  font-weight: 400;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: #a3bffa;
+}
+
+.markdown blockquote p:first-child {
+  margin-top: 0;
+}
+
+.markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown pre {
+  background-color: #1C1D21;
+  color: #FFFFFF;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.25rem;
+}
+
+.markdown pre code {
+  background-color: transparent;
+  border: none;
+}
+
+.markdown pre + blockquote {
+  margin-top: 1.5rem;
+}
+
+.markdown h6 + pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.markdown ol, .markdown ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.markdown ol > li, .markdown ul > li {
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.markdown ol > li > p, .markdown ul > li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+}
+
+.markdown ul > li {
+  padding-left: 0.5rem;
+}
+
+.markdown ul > li::before {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  height: 1rem;
+  margin-left: -1.5rem;
+  margin-top: 0.25rem;
+  width: 1rem;
+  background-image: url("/assets/img/icon-arrow.svg");
+  content: "";
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.markdown table th, .markdown table td {
+  padding: 0.75rem;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-color: #e2e8f0;
+}
+
+.markdown table th:last-child, .markdown table td:last-child {
+  border-right-width: 0;
+}
+
+.markdown table th {
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #edf2f7;
+  color: #718096;
+  font-size: .75rem;
+  letter-spacing: 1px;
+}
+
+.markdown table td {
+  color: #2d3748;
 }
 
 .sr-only{
