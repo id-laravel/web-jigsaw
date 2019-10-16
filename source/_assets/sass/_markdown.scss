@@ -114,11 +114,12 @@
     @apply .font-normal;
     @apply .p-4;
     @apply .m-0;
-    @apply .text-sm;
+    @apply .text-base;
     @apply .rounded;
     @apply .border;
     @apply .border-dashed;
     @apply .border-indigo-300;
+    font-style: normal;
 
     p:first-child {
       @apply .mt-0;

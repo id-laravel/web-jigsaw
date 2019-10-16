@@ -283,6 +283,148 @@ Beberapa poin penting dari kode diatas:
 
 ## Validasi Data
 
+Di bagian sebelumnya kita sudah bisa mengubah JSON menjadi array untuk kemudian disimpan ke database. Tapi kita belum melakukan validasi apapun, sehingga data di tabel `mobil` menjadi kotor.
+
+![image-20191016075506799](../assets/uploads/image-20191016075506799-1187309.png)
+
+Selanjutnya kita akan melakukan validasi sederhana, yaitu memastikan tidak ada kolom yang kosong.
+
+Untuk melakukan validasi data menggunakan [FormRequest](https://laravel.com/docs/master/validation#form-request-validation) ada beberapa langkah yang perlu dilakukan:
+
+### Tambahkan Form Request
+
+Jalankan perintah:
+
+```bash
+php artisan make:request Mobil/Store
+```
+
+Selanjutnya *inject* form request tersebut ke method `store`:
+
+```php
+use App\Http\Requests\Mobil\Store;
+
+...
+  
+public function store(Store $request)
+{
+  
+}
+```
+
+Langkah berikutnya adalah mengolah data untuk proses validasi. Laravel sendiri sudah menyediakan mekanisme untuk [memvalidasi array](https://laravel.com/docs/master/validation#validating-arrays).  Yang kita perlukan hanyalah menambahkan wildcard `*`:
+
+###### app/Http/Requests/Mobil/Store.php
+
+```php
+public function authorize()
+{
+  return true;
+}
+
+public function rules()
+{
+  return [
+    'data.*.nama' => ['required'],
+    'data.*.harga' => ['required'],
+  ];
+}
+
+```
+
+Setelah validasi siap, kita lakukan langkah terakhir, yaitu mengolah data agar sesuai format yang diharapkan oleh Laravel. Untuk kebutuhan ini, kita bisa menambah *method* `prepareForValidation` di form request yang sudah kita buat.
+
+Kita ingin mengubah ini:
+
+![image-20191016080825302](../assets/uploads/image-20191016080825302.png)
+
+Menjadi seperti ini:
+
+![image-20191016081007421](../assets/uploads/image-20191016081007421.png)
+
+###### app/Http/Requests/Mobil/Store.php
+
+```php
+public function prepareForValidation()
+{
+  $data = json_decode(request('data'));
+  $formattedData = [];
+  foreach ($data as $row)
+  {
+    $formattedData[] = [
+      'nama' => $row[0],
+      'harga' => $row[1],
+    ];
+  }
+
+  $this->merge(['data' => $formattedData]);
+}
+```
+
+Cukup sederhana bukan? Mencoba submit form tanpa mengisi semua data akan menyebabkan pesan error:
+
+![image-20191016081214262](../assets/uploads/image-20191016081214262.png)
+
+Lebih baik lagi, kita bisa memindahkan logic untuk memformat harga dari controller ke form request:
+
+```php
+public function prepareForValidation()
+{
+  $data = json_decode(request('data'));
+  $formattedData = [];
+  $formatter = new \NumberFormatter('id_ID', \NumberFormatter::CURRENCY);
+
+  foreach ($data as $row)
+  {
+    $formattedData[] = [
+      'nama' => $row[0],
+      'harga' => $formatter->parseCurrency($row[1], $curr),
+    ];
+  }
+
+  $this->merge(['data' => $formattedData]);
+}
+```
+
+Sekarang, `$request->data` sudah memiliki format yang *eloquent friendly*:
+
+![image-20191016081557854](../assets/uploads/image-20191016081557854-1188559.png)
+
+Maka, `MobilController@store` bisa disederhakanan lagi menjadi seperti berikut ini:
+
+```php
+public function store(Store $request)
+{
+  $data = $request->get('data');
+
+  foreach ($data as $row) {
+    Mobil::create($row);
+  }
+
+  ...
+}
+```
+
+> Jangan lupa untuk menambahkan `$fillable` di model `Mobil` agar tidak kena `MassAssignmentException`.
+
+Untuk mengubah pesan error agar lebih *user friendly*, kita bisa tambahkan method `messages()` di form request:
+
+```php
+public function messages()
+{
+  return [
+    'data.*.nama.required' => 'Nama wajib diisi',
+    'data.*.harga.required' => 'Harga wajib diisi',
+  ];
+}
+```
+
+![image-20191016083017200](../assets/uploads/image-20191016083017200.png)
+
+Sampai sini kita sudah berhasil memvalidasi form agar data yang masuk ke database tidak kotor. Meskipun begitu, masih ada satu isu yang cukup mengganggu, yaitu **menampilkan kembali hasil inputan sebelumnya jika ada validasi yang gagal**. Bisa dicoba ditambahkan sendiri?
+
+ 
+
 ## Edit Data
 
 ## Hapus Data

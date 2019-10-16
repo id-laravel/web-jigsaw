@@ -1051,11 +1051,12 @@ p {
   font-weight: 400;
   padding: 1rem;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-radius: 0.25rem;
   border-width: 1px;
   border-style: dashed;
   border-color: #a3bffa;
+  font-style: normal;
 }
 
 .markdown blockquote p:first-child {

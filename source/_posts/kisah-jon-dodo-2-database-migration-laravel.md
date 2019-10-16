@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: "Kisah Jon Dodo 2: Database Migration di Laravel"
 categories: [database, migration]
-date: 2015-03-02
+date: 2015-04-02
 ---
 
 > Jika Anda tertarik dengan kisah fiktif dibalik penemuan *database migration*, jangan lewatkan bagian pertama dari artikel ini: [Kisah Jon Dodo 1: Sejarah Dibalik Penemuan Database Migration](/post/kisah-jon-dodo-1-sejarah-dibalik-penemuan-database-migration/) 
