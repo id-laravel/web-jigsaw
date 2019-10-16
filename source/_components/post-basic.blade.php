@@ -1,5 +1,5 @@
-<div class="flex flex-col mb-4">
-    <p class="text-gray-700 font-medium my-2">
+<div class="flex flex-col mb-6">
+    <p class="text-gray-600 my-0 text-sm">
         {{ $post->getDate()->format('j F Y') }}
     </p>
 

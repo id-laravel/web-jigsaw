@@ -712,17 +712,17 @@ blockquote {
   margin-bottom: 2rem;
   padding-left: 1.5rem;
   color: #2d3748;
-  font-size: 1.125rem;
+  font-size: 1.35rem;
 }
 
 code {
-  background-color: #e2e8f0;
+  background-color: #edf2f7;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 1px;
   padding-bottom: 1px;
   border-radius: 0.25rem;
-  font-size: .75rem;
+  font-size: 1rem;
 }
 
 code.hljs {
@@ -762,6 +762,10 @@ h1, h2, h3, h4, h5 {
   font-family: PT Sans;
 }
 
+h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
+  color: #1a202c;
+}
+
 h1 {
   font-size: 2.625rem;
   font-weight: 700;
@@ -785,18 +789,18 @@ h3 {
 }
 
 h4 {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.5rem;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
 }
 
 h6 {
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1.35rem;
 }
 
 hr {
@@ -1001,6 +1005,22 @@ p {
   text-align: center;
 }
 
+.markdown h1 a:before, .markdown h2 a:before, .markdown h3 a:before {
+  content: "#";
+  font-size: 0.8em;
+  margin-left: -25px;
+  margin-top: 0.2em;
+  position: absolute;
+  opacity: 0.5;
+  color: #fc8181;
+  font-weight: 300;
+  font-family: Arial, serif;
+}
+
+.markdown h1 a:hover:before, .markdown h2 a:hover:before, .markdown h3 a:hover:before {
+  opacity: 1;
+}
+
 .markdown h4 + p {
   margin-top: 0.75rem;
 }
@@ -1046,6 +1066,11 @@ p {
   margin-bottom: 0;
 }
 
+.markdown h1 code, .markdown h2 code, .markdown h3 code, .markdown h4 code, .markdown h5 code {
+  font-size: 0.8em;
+  color: #718096;
+}
+
 .markdown pre {
   background-color: #1C1D21;
   color: #FFFFFF;
@@ -1057,10 +1082,17 @@ p {
 .markdown pre code {
   background-color: transparent;
   border: none;
+  font-size: .9rem;
+  line-height: 2;
 }
 
 .markdown pre + blockquote {
   margin-top: 1.5rem;
+}
+
+.markdown p + pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .markdown h6 + pre {
@@ -1136,7 +1168,7 @@ p {
   font-weight: 700;
   background-color: #edf2f7;
   color: #718096;
-  font-size: .75rem;
+  font-size: .9rem;
   letter-spacing: 1px;
 }
 
@@ -11830,7 +11862,7 @@ p {
 }
 
 .text-xs{
-  font-size: .75rem;
+  font-size: .9rem;
 }
 
 .text-sm{
@@ -11842,11 +11874,11 @@ p {
 }
 
 .text-lg{
-  font-size: 1.125rem;
+  font-size: 1.35rem;
 }
 
 .text-xl{
-  font-size: 1.25rem;
+  font-size: 1.45rem;
 }
 
 .text-2xl{
@@ -23169,7 +23201,7 @@ p {
   }
 
   .sm\:text-xs{
-    font-size: .75rem;
+    font-size: .9rem;
   }
 
   .sm\:text-sm{
@@ -23181,11 +23213,11 @@ p {
   }
 
   .sm\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.35rem;
   }
 
   .sm\:text-xl{
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 
   .sm\:text-2xl{
@@ -34501,7 +34533,7 @@ p {
   }
 
   .md\:text-xs{
-    font-size: .75rem;
+    font-size: .9rem;
   }
 
   .md\:text-sm{
@@ -34513,11 +34545,11 @@ p {
   }
 
   .md\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.35rem;
   }
 
   .md\:text-xl{
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 
   .md\:text-2xl{
@@ -45833,7 +45865,7 @@ p {
   }
 
   .lg\:text-xs{
-    font-size: .75rem;
+    font-size: .9rem;
   }
 
   .lg\:text-sm{
@@ -45845,11 +45877,11 @@ p {
   }
 
   .lg\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.35rem;
   }
 
   .lg\:text-xl{
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 
   .lg\:text-2xl{
@@ -57165,7 +57197,7 @@ p {
   }
 
   .xl\:text-xs{
-    font-size: .75rem;
+    font-size: .9rem;
   }
 
   .xl\:text-sm{
@@ -57177,11 +57209,11 @@ p {
   }
 
   .xl\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.35rem;
   }
 
   .xl\:text-xl{
-    font-size: 1.25rem;
+    font-size: 1.45rem;
   }
 
   .xl\:text-2xl{

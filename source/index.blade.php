@@ -19,7 +19,7 @@ pagination:
         yang santai oleh para kontributor berpengalaman, semua artikel layak untuk dibaca hingga baris terakhir.
     </p>
 
-    <hr class="border-b my-6">
+    <hr class="border-b my-6 mb-12">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-basic')
