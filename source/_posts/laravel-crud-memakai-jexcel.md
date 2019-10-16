@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: CRUD di Laravel Menggunakan jExcel
+title: CRUD di Laravel Menggunakan jExcel Bagian 1
 categories: [laravel]
 date: 2019-10-15
 author: Bayu Hendra Winata
@@ -13,10 +13,11 @@ jExcel adalah sebuah library Javascript untuk menampilkan data menyerupai *sprea
 
 Tutorial kali ini akan membahas cara melakukan CRUD secara sederhana menggunakan jExcel, yang meliputi:
 
-1. Input bulk data 
-2. Validasi data
-3. Edit data
-4. Hapus data
+1. Menampilkan data
+2. Input bulk data 
+3. Validasi data
+4. Edit data
+5. Hapus data
 
 Semua contoh kode akan menggunakan jExcel v3 dan jQuery.
 
@@ -421,10 +422,26 @@ public function messages()
 
 ![image-20191016083017200](../assets/uploads/image-20191016083017200.png)
 
-Sampai sini kita sudah berhasil memvalidasi form agar data yang masuk ke database tidak kotor. Meskipun begitu, masih ada satu isu yang cukup mengganggu, yaitu **menampilkan kembali hasil inputan sebelumnya jika ada validasi yang gagal**. Bisa dicoba ditambahkan sendiri?
+Sampai sini kita sudah berhasil memvalidasi form agar data yang masuk ke database tidak kotor. Meskipun begitu, masih ada satu isu yang cukup mengganggu, yaitu **menampilkan kembali hasil inputan sebelumnya jika ada validasi yang gagal**. Anda bisa mencoba sendiri untuk latihan atau bisa melihat solusinya di https://github.com/berbageek/jexcel-crud/commit/43fb705603c4cf1e5762e568586d82118be0440c.
 
- 
 
-## Edit Data
 
-## Hapus Data
+## Penutup
+
+Sejauh ini kita sudah berhasil menyelesaikan 3 dari 5 target:
+
+1. Menampilkan data ✅
+2. Input bulk data ✅
+3. Validasi ✅
+4. Edit data
+5. Hapus data 
+
+Poin 5 dan 6 akan dibahas lebih lanjut di [bagian kedua](/post/laravel-crud-memakai-jexcel-2).
+
+Beberapa hal penting yang patut diperhatikan antara lain:
+
+1. jExcel menyimpan data dalam bentuk JSON. Untuk mendapatkan data bisa memanggil fungsi `getData`.
+2. Untuk mengubah JSON menjadi array yang Laravel friendly bisa memakai `json_decode`.
+3. Untuk memformat data yang dikirim dari form sebelum divalidasi oleh Laravel bisa memakai fungsi `prepareForValidation`.
+4. Fungsi `insertRow` di jExcel digunakan untuk menambahkan satu atau banyak row baru.
+5. Cheatsheet lengkap jExcel bisa dibaca di https://bossanova.uk/jexcel/v3/docs/quick-reference.
