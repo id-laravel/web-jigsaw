@@ -211,3 +211,9 @@ Sejauh ini fungsionalitas normal *auto save* sudah berhasil kita implementasikan
 Silakan dicoba sendiri untuk melatih problem solving dan menambah pemahaman terhadap jExcel 😎.
 
 > Repository untuk seri tulisan jExcel ini bisa diakses di https://github.com/berbageek/jexcel-crud.
+
+
+
+## Known Issues
+
+1. Ada bug ketika mencoba membuat multiple spreadsheet di halaman yang sama menggunakan jQuery 3 + jExcel versi 3. Thread dan solusinya bisa dilihat di https://berbageek.com/216/multiple-spreadsheets-jexcel-dihalaman-yang-sama.
