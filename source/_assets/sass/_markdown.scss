@@ -110,15 +110,14 @@
   }
 
   blockquote {
-    @apply .bg-red-100;
+    @apply .bg-white;
     @apply .font-normal;
+    @apply .not-italic;
     @apply .text-sm;
     @apply .p-6;
     @apply .m-0;
     @apply .rounded;
-    @apply .border;
-    @apply .border-dashed;
-    @apply .border-red-300;
+    @apply .border-none;
 
     p:first-child {
       @apply .mt-0;
