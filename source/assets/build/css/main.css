@@ -715,28 +715,6 @@ blockquote {
   font-size: 1.35rem;
 }
 
-code {
-  background-color: #edf2f7;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  border-radius: 0.25rem;
-  font-size: 1rem;
-}
-
-code.hljs {
-  background-color: transparent;
-  padding: 0;
-}
-
-code.hljs .hljs-comment,
-code.hljs .hljs-keyword,
-code.hljs .hljs-meta {
-  font-weight: 400;
-  font-style: normal;
-}
-
 h1,
 h2,
 h3,
@@ -1047,16 +1025,15 @@ p {
 }
 
 .markdown blockquote {
-  background-color: #ebf4ff;
+  background-color: #fff5f5;
   font-weight: 400;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 1.5rem;
   margin: 0;
-  font-size: 1.25rem;
   border-radius: 0.25rem;
   border-width: 1px;
   border-style: dashed;
-  border-color: #a3bffa;
-  font-style: normal;
+  border-color: #feb2b2;
 }
 
 .markdown blockquote p:first-child {
@@ -1065,6 +1042,28 @@ p {
 
 .markdown blockquote p:last-child {
   margin-bottom: 0;
+}
+
+.markdown code {
+  background-color: #edf2f7;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 0.25rem;
+  font-size: .9rem;
+}
+
+.markdown code.hljs {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown code.hljs .hljs-comment,
+.markdown code.hljs .hljs-keyword,
+.markdown code.hljs .hljs-meta {
+  font-weight: 400;
+  font-style: normal;
 }
 
 .markdown h1 code, .markdown h2 code, .markdown h3 code, .markdown h4 code, .markdown h5 code {
@@ -1102,9 +1101,11 @@ p {
 }
 
 .markdown ol, .markdown ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-left: 2rem;
 }
 
 .markdown ol > li, .markdown ul > li {
@@ -1125,6 +1126,10 @@ p {
 
 .markdown ol {
   list-style-type: decimal;
+}
+
+.markdown ul {
+  list-style: initial;
 }
 
 .markdown ul > li {

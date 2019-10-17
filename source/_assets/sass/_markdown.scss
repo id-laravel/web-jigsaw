@@ -110,16 +110,15 @@
   }
 
   blockquote {
-    @apply .bg-indigo-100;
+    @apply .bg-red-100;
     @apply .font-normal;
-    @apply .p-4;
+    @apply .text-sm;
+    @apply .p-6;
     @apply .m-0;
-    @apply .text-base;
     @apply .rounded;
     @apply .border;
     @apply .border-dashed;
-    @apply .border-indigo-300;
-    font-style: normal;
+    @apply .border-red-300;
 
     p:first-child {
       @apply .mt-0;
@@ -127,6 +126,26 @@
 
     p:last-child {
       @apply .mb-0;
+    }
+  }
+
+  code {
+    @apply .bg-gray-200;
+    @apply .px-2;
+    @apply .py-px;
+    @apply .rounded;
+    @apply .text-xs;
+  }
+
+  code.hljs {
+    @apply .bg-transparent;
+    @apply .p-0;
+
+    .hljs-comment,
+    .hljs-keyword,
+    .hljs-meta {
+      @apply .font-normal;
+      @apply .not-italic;
     }
   }
 
@@ -163,8 +182,9 @@
   }
 
   ol, ul {
-    @apply .my-4;
-    @apply .pl-4;
+    @apply .my-2;
+    @apply .mx-6;
+    @apply .pl-8;
     > li {
       @apply .leading-normal;
       @apply .mb-1;
@@ -181,6 +201,10 @@
 
   ol {
     list-style-type: decimal;
+  }
+
+  ul {
+    list-style: initial;
   }
 
   ul {
