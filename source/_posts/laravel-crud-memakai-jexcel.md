@@ -2,6 +2,8 @@
 extends: _layouts.post
 section: content
 title: CRUD di Laravel Menggunakan jExcel Bagian 1
+spoiler: Menampilkan, bulk input, dan validasi data
+description: Menampilkan, bulk input, dan validasi data CRUD dengan jExcel dan Laravel
 categories: [laravel]
 date: 2019-10-15
 author: Bayu Hendra Winata

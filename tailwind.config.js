@@ -3,7 +3,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'PT Sans'
+          'Work Sans'
         ],
         heading: [
           'PT Sans'

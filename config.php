@@ -7,11 +7,12 @@ return [
     'siteTagline' => 'Belajar Laravel Ala Indonesia',
     'siteDescription' => 'Tutorial Laravel Bahasa Indonesia',
     'siteAuthor' => 'Programmer Indonesia',
+    'locale' => 'id',
 
     // collections
     'collections' => [
         'posts' => [
-            'author' => 'Artisan', // Default author, if not provided in a post
+            'author' => 'Jon Dodo', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'post/{filename}',
             'posts' => function ($page, $allPosts) {
@@ -30,7 +31,9 @@ return [
 
     // helpers
     'getDate' => function ($page) {
-        return Datetime::createFromFormat('U', $page->date);
+    \Jenssegers\Date\Date::setLocale('id');
+
+        return \Jenssegers\Date\Date::createFromFormat('U', $page->date)->format('j F Y');
     },
     'getExcerpt' => function ($page, $length = 255) {
         if ($page->excerpt) {

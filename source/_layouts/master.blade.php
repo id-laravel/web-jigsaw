@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="{{ $page->meta_description ?? $page->siteDescription }}">
+        <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
 
         <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:type" content="website" />
@@ -41,7 +41,7 @@
             @includeWhen($page->production, '_scripts.ga')
         @endif
 
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400|PT+Sans:400,700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>

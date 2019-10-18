@@ -12,10 +12,12 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
-
-    <p class="text-gray-600 text-base md:my-0">Ditulis oleh {{ $page->author }}
-        pada {{ date('j F Y', $page->date) }}</p>
+    <div class="text-center">
+        <p class="text-base font-heading md:my-0">
+        <div class="text-sm">{{ $page->getDate() }} &bull; {{ $page->author }}</div>
+        </p>
+        <h1 class="leading-none mb-2">{{ $page->title }}</h1>
+    </div>
 
     {{--    @if ($page->categories)--}}
     {{--        <div class="mb-10 mt-4">--}}

@@ -105,7 +105,7 @@
   }
 
   p {
-    @apply .leading-normal;
+    @apply .leading-loose;
   }
 
   blockquote {
@@ -184,7 +184,8 @@
     color: #FFFFFF;
     @apply .shadow-md;
     @apply .rounded;
-    @apply .p-4;
+    @apply .py-4;
+    @apply .px-8;
     code {
       background-color: transparent;
       border: none;

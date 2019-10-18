@@ -725,28 +725,12 @@ video {
 }
 
 body {
-  font-size: 17px;
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
   color: #e53e3e;
-}
-
-a:hover {
-  color: #c53030;
-}
-
-blockquote {
-  border-color: #fc8181;
-  border-left-width: 4px;
-  font-weight: 400;
-  font-style: italic;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
-  color: #2d3748;
-  font-size: 1.35rem;
 }
 
 h1,
@@ -775,6 +759,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5 a:hover {
+  text-decoration: none;
   color: #1a202c;
 }
 
@@ -1054,7 +1039,7 @@ p {
 }
 
 .markdown p {
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .markdown blockquote {
@@ -1128,7 +1113,10 @@ p {
   color: #FFFFFF;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   border-radius: 0.25rem;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .markdown pre code {
@@ -4613,7 +4601,7 @@ p {
 }
 
 .font-sans{
-  font-family: PT Sans;
+  font-family: Work Sans;
 }
 
 .font-serif{
@@ -15952,7 +15940,7 @@ p {
   }
 
   .sm\:font-sans{
-    font-family: PT Sans;
+    font-family: Work Sans;
   }
 
   .sm\:font-serif{
@@ -27284,7 +27272,7 @@ p {
   }
 
   .md\:font-sans{
-    font-family: PT Sans;
+    font-family: Work Sans;
   }
 
   .md\:font-serif{
@@ -38616,7 +38604,7 @@ p {
   }
 
   .lg\:font-sans{
-    font-family: PT Sans;
+    font-family: Work Sans;
   }
 
   .lg\:font-serif{
@@ -49948,7 +49936,7 @@ p {
   }
 
   .xl\:font-sans{
-    font-family: PT Sans;
+    font-family: Work Sans;
   }
 
   .xl\:font-serif{
