@@ -1,7 +1,8 @@
 ---
 extends: _layouts.post
 section: content
-title: "Package Pilihan Minggu Ini #1: Workflow"
+title: "Package Pilihan Minggu Ini #1: Development Tools"
+author: Bayu Hendra Winata
 categories: [package]
 date: 2015-03-01
 ---

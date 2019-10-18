@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Instalasi Laravel 5
+author: Bayu Hendra Winata
 categories: [laravel, install]
 date: 2015-02-28
 ---

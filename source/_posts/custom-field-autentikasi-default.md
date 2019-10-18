@@ -2,7 +2,8 @@
 extends: _layouts.post
 section: content
 title: Kolom Password Dalam Autentikasi, Bisakah Diganti?
-categories: [autentikasi]
+author: Bayu Hendra Winata
+categories: [laravel]
 date: 2015-04-05
 ---
 

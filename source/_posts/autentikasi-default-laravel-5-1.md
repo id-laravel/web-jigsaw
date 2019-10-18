@@ -2,7 +2,8 @@
 extends: _layouts.post
 section: content
 title: "Autentikasi Default Laravel 5.1"
-categories: [autentikasi, login, logout, registrasi, reset password]
+author: Bayu Hendra Winata
+categories: [laravel]
 date: 2015-08-06
 ---
 

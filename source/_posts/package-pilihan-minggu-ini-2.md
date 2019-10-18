@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Package Pilihan Minggu #2: Manipulasi File"
+author: Bayu Hendra Winata
 categories: [package]
 date: 2015-03-18
 ---

@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Halo Bro: Membuat Halaman Web Pertama Dengan Laravel"
+author: Bayu Hendra Winata
 categories: [router, view, controller]
 date: 2013-10-06
 ---

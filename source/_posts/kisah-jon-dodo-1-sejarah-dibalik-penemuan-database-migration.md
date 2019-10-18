@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Kisah Jon Dodo 1: Sejarah Dibalik Penemuan Database Migration"
+author: Bayu Hendra Winata
 categories: [database, migration]
 date: 2015-04-01
 ---

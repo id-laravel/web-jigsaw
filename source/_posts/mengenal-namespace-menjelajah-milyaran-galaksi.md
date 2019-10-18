@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Mengenal Namespace: Menjelajah Milyaran Galaksi"
+author: Bayu Hendra Winata
 categories: [namespace]
 date: 2013-10-31
 ---

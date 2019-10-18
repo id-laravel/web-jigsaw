@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Menghilangkan folder public di URL pada aplikasi Laravel
+author: Bayu Hendra Winata
 categories: [tips, url]
 date: 2013-12-08
 ---

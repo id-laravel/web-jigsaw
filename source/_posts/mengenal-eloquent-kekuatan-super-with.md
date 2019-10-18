@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Mengenal Eloquent: Kekuatan Super `with`"
+author: Bayu Hendra Winata
 categories: [eloquent, model]
 date: 2015-02-27
 ---

@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Memisah File Log Aplikasi
+author: Bayu Hendra Winata
 categories: [snippet, log]
 date: 2015-08-31
 ---

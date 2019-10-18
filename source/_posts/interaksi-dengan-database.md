@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Interaksi Dengan Database
+author: Bayu Hendra Winata
 categories: [eloquent, database, model]
 date: 2013-10-12
 ---

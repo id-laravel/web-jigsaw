@@ -1,7 +1,8 @@
 ---
-title: Kenapa memilih Laravel?
 extends: _layouts.post
 section: content
+title: Kenapa memilih Laravel?
+author: Bayu Hendra Winata
 categories: [laravel]
 date: 2013-09-15
 ---

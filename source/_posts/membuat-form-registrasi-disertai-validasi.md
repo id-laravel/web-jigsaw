@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Membuat Form Registrasi Dengan Laravel
+author: Bayu Hendra Winata
 categories: [form, validasi, view]
 date: 2013-10-18
 ---

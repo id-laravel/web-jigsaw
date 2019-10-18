@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Custom Pagination: Mengganti Tampilan Default"
+author: Bayu Hendra Winata
 categories: [paginasi]
 date: 2013-11-09
 ---

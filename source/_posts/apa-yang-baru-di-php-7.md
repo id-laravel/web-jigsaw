@@ -3,6 +3,7 @@ extends: _layouts.post
 section: content
 title: Afikaaa... Ada Yang Baru Nih di PHP 7
 description:
+author: Bayu Hendra Winata
 categories: [php]
 date: 2015-04-07
 ---

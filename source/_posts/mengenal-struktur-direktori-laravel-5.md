@@ -1,5 +1,6 @@
 ---
 title: Mengenal Struktur Direktori Laravel 5
+author: Salman El Farisi
 extends: _layouts.post
 section: content
 categories: [laravel-5, basic]

@@ -79,13 +79,13 @@ hr {
 li {
     ul,
     ol {
-        @apply .my-0;
+        @apply .ml-4;
     }
 }
 
 ol,
 ul {
-    @apply .my-4;
+    @apply .my-0;
 }
 
 p {

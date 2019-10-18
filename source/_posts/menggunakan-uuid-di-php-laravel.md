@@ -1,5 +1,6 @@
 ---
 title: Menggunakan UUID (Universally Unique Identifier) di PHP / Laravel
+author: Yoga Hanggara
 extends: _layouts.post
 section: content
 categories: [php, laravel-5, laravel-4, basic, uuid, database]

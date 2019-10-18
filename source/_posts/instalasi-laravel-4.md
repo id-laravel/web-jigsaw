@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Instalasi Laravel 4
+author: Bayu Hendra Winata
 categories: [laravel, install]
 date: 2013-09-18
 ---

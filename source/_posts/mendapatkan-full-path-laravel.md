@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Mendapatkan full path laravel
+author: Bayu Hendra Winata
 categories: [helper, path]
 date: 2014-01-13
 ---

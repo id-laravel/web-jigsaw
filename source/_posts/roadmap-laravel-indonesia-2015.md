@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: Roadmap Laravel Indonesia Tahun 2015
+author: Bayu Hendra Winata
 categories: [id-laravel]
 date: 2014-02-24
 ---

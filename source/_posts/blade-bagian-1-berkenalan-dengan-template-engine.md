@@ -2,7 +2,8 @@
 extends: _layouts.post
 section: content
 title: "Blade Bagian 1: Berkenalan Dengan Template Engine"
-categories: [view, blade, template]
+author: Bayu Hendra Winata
+categories: [laravel]
 date: 2013-11-12
 ---
 

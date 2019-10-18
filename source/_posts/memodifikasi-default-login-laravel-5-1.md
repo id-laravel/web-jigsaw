@@ -2,6 +2,7 @@
 extends: _layouts.post
 section: content
 title: "Memodifikasi Default Login Laravel 5.1"
+author: Bayu Hendra Winata
 categories: [autentikasi, login, logout, 5.1]
 date: 2015-10-01
 ---
