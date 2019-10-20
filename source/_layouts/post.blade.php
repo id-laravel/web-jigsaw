@@ -37,7 +37,7 @@
         {!! $page->content !!}
     </div>
 
-    <nav class="text-sm border-t-2 py-8 text-center">
+    <nav class="text-sm border-t-2 border-b-2 my-8 py-8 text-center">
         Mungkin Anda tertarik dengan artikel menarik lainya:
         <ol>
             @if ($next = $page->getNext())
@@ -56,4 +56,7 @@
             @endif
         </ol>
     </nav>
+
+    @include('_scripts.disqus', compact('page'))
+
 @endsection
