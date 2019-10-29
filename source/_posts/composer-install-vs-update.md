@@ -46,7 +46,7 @@ Masih ada beberapa (lead) programmer yang memasukkan composer.lock ke dalam .git
     - Kamis, Dodo setup proyek di localhost dan menjalankan `composer install`. Nah, karena tidak ada file `composer.lock`, maka sesuai diagram di atas, Composer akan mengunduh versi terbaru yaitu versi 6.2.0 yang sudah mengakomodir bug yang ditemui Jon. Karena bug sudah diperbaiki di level framework, Dodo tidak bisa mereproduksi bug yang dilaporkan Jon. Tetapi, karena masih terinstall Laravel 6.1.0, Jon masih menemui bug tersebug di localhost-nya.
     - Sepanjang Kamis-Jumat, Jon dan Dodo bertengkar hebat karena **jalan kok di tempat saya, laptopmu yang error kali**. Semuanya disebabkan karena composer.lock tidak dicommit. Menyedihkan.
 
-> Meng-ignore composer.lock sudah lama [tidak dianjurkan](https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control). Jika kamu masih menemui lead programmer yang memutuskan seperti itu, silakan diingatkan agar kembali ke jalan yang benar.
+> Meng-ignore composer.lock sudah lama [tidak dianjurkan](https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control). Jika kamu masih menemui lead programmer yang memutuskan seperti itu, silakan diingatkan agar kembali ke jalan yang benar 😇
 
 ## Kapan Melakukan Update
 
@@ -62,7 +62,6 @@ composer update laravel/framework
 
 Composer selanjutnya akan mengecek apakah laravel/framework sudah merilis versi baru. Jika ada, source code laravel/framework di folder `vendor` dan isi file composer.lock akan diperbarui. Package lain tidak akan tersentuh. 
 
-## 
 
 ## Referensi
 
