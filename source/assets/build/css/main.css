@@ -1142,13 +1142,13 @@ p {
 .markdown ol, .markdown ul {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding-left: 2rem;
 }
 
 .markdown ol > li, .markdown ul > li {
-  line-height: 1.5;
+  line-height: 2;
   margin-bottom: 0.25rem;
   padding-bottom: 0.25rem;
 }

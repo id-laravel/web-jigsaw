@@ -208,10 +208,10 @@
 
   ol, ul {
     @apply .my-2;
-    @apply .mx-6;
+    @apply .mx-2;
     @apply .pl-8;
     > li {
-      @apply .leading-normal;
+      @apply .leading-loose;
       @apply .mb-1;
       @apply .pb-1;
       > p {
