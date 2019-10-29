@@ -41,7 +41,7 @@
         @includeWhen($page->production, '_scripts.ga')
     @endif
 
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400|PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700|PT+Sans:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
