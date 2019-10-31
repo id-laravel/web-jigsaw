@@ -29,9 +29,9 @@ Setelah itu perintah `composer install` bisa dijalankan. Sesuai alur pada diagra
 
 Jika di composer.json tercantum `"laravel/framework": "^6.0"` sedangkan versi yang tersedia sudah sampai 6.4.0, maka yang akan diunduh dan dicatat di `composer.lock` adalah versi 6.4.0, bukan 6.0.0. Pembahasan tentang perbedaan cara penulisan versi bisa dibaca di [artikel berikut ini](https://madewithlove.be/tilde-and-caret-constraints/).
 
-> Untuk Laravel, jika folder proyek pertama kali dibuat melalui perintah `composer create-project laravel/laravel aplikasiku` atau `laravel new aplikasiku`, maka perintah `composer install` secara otomatis akan langsung dijalankan sehingga seolah-olah file `composer.lock` sudah ada.
-
 Lalu, semua source code termasuk **composer.json dan composer.lock** dicommit dan dipush ke SVN (misalnya gitlab, github, atau bitbucket). Programmer lain yang akan setup pertama kali, cukup melakukan *clone repository* dan menjalankan `composer install`. Tidak perlu (dan tidak direkomendasikan) menjalankan `composer update`.
+
+>  Untuk Laravel, jika folder proyek pertama kali dibuat melalui perintah `composer create-project laravel/laravel aplikasiku` atau `laravel new aplikasiku`, maka perintah `composer install` secara otomatis akan langsung dijalankan sehingga seolah-olah file `composer.lock` sudah ada.
 
 ## Kenapa composer.lock Harus Dicommit?
 
@@ -61,6 +61,42 @@ composer update laravel/framework
 ```
 
 Composer selanjutnya akan mengecek apakah laravel/framework sudah merilis versi baru. Jika ada, source code laravel/framework di folder `vendor` dan isi file composer.lock akan diperbarui. Package lain tidak akan tersentuh. 
+
+### Menangani Konflik
+
+Konflik bisa terjadi ketika ada 2 programmer yang menambah (atau update) package. Tidak perlu resah, ketika menggunakan SVN (seperti Git), maka konflik adalah hal yang lumrah. Yang perlu dilakukan hanyalah menyelesaikannya dengan baik-baik. Bagaimana caranya?
+
+Ingat kembali perbedaan file composer.json dan composer.lock di atas. Menambah 1 baris di composer.json (misal dengan perintah `composer require awesome/package`) bisa mengakibatkan penambahan beberapa baris di compose.lock. Oleh sebab itu, biasanya konflik di composer.json lebih mudah diselesaikan.
+
+Jadi, cara tepat untuk *resolve conflict* adalah:
+
+1. Untuk file `composer.json`, biasanya perbedaannya cukup mudah untuk diselesaikan secara manual. Contoh konflik yang terjadi karena ada 2 programmer menambahkan package:
+
+    ```json
+    <<<<<<<< HEAD
+        "laravolt/suitable": "^3.5",
+    ============
+        "laravolt/thunderclap": "~0.15",
+    >>>>>>>>>> 32874b239479
+    ```
+
+    Konflik di atas bisa langsung diperbaiki menjadi:
+
+    ```json
+    "laravolt/suitable": "^3.5",
+    "laravolt/thunderclap": "~0.15",
+    ```
+
+    
+
+2. Untuk file `composer.lock`, bisa *resolve using theirs* atau *resolve using mine*. Bebas. Ini hanya perbaikan sementara.
+
+3. Jika konflik sudah berhasil diselesaikan (biasanya ditandai dengan sebuah commit *merge conflicts*), jalankan  `composer update` untuk memberbarui `composer.lock` agar sesuai dengan isi `composer.json`. Ingat, di langkah sebelumnya kita melakukan *resolve using theirs* atau *resolve using mine*. Berarti ada potongan kode di `composer.lock` yang hilang. Oleh sebab itu, kita harus meng-override-nya kembali dengan perintah `composer update`.
+
+4. Commit `composer.lock`.
+
+5. Woro-woro ke programmer lain yang terlibat untuk untuk *pull* dan menjalankan `composer install` agar bisa mendapatkan versi package yang sama.
+
 
 
 ## Referensi
