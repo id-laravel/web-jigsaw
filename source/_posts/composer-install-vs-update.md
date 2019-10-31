@@ -62,7 +62,13 @@ composer update laravel/framework
 
 Composer selanjutnya akan mengecek apakah laravel/framework sudah merilis versi baru. Jika ada, source code laravel/framework di folder `vendor` dan isi file composer.lock akan diperbarui. Package lain tidak akan tersentuh. 
 
-### Menangani Konflik
+## Kapan Melakukan Install
+
+Perintah `composer install` dijalankan ketika ada **programmer lain** yang menambahkan package. Hal ini bisa dilihat di git commit apakah ada perubahan file `composer.json` dan `composer.lock`. Jadi, rajin-rajinlah melihat *commit history* programmer lain dalam satu proyek.
+
+Atau, biasanya kita baru menyadari ketika menemukan error **"Class Foo\Bar Not Found"**. Pada saat itulah tandanya kita harus melaukan `composer install`. Sekali lagi, `composer install` ya, jangan `composer update`.
+
+## Menangani Konflik
 
 Konflik bisa terjadi ketika ada 2 programmer yang menambah (atau update) package. Tidak perlu resah, ketika menggunakan SVN (seperti Git), maka konflik adalah hal yang lumrah. Yang perlu dilakukan hanyalah menyelesaikannya dengan baik-baik. Bagaimana caranya?
 
