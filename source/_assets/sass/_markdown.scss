@@ -112,9 +112,9 @@
     @apply .bg-white;
     @apply .font-normal;
     @apply .not-italic;
-    @apply .text-sm;
-    @apply .p-6;
-    @apply .mb-8;
+    @apply .text-base;
+    @apply .p-10;
+    @apply .my-16;
     @apply .rounded;
     @apply .border-none;
     @apply .shadow-md;
@@ -140,7 +140,7 @@
     }
 
     &:after {
-      bottom: 0;
+      top: 0;
       left: 0;
     }
 
@@ -195,7 +195,7 @@
   }
 
   pre + blockquote {
-    @apply .mt-6;
+    @apply .mt-10;
   }
 
   p + pre {
