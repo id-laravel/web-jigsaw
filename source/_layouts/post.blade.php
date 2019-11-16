@@ -38,7 +38,7 @@
     </div>
 
     <nav class="text-sm border-t-2 border-b-2 my-8 py-8 text-center">
-        Mungkin Anda tertarik dengan artikel menarik lainya:
+        Mungkin Anda tertarik dengan artikel menarik lainnya:
         <ol>
             @if ($next = $page->getNext())
                 <li>
