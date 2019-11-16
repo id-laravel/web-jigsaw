@@ -9,22 +9,20 @@ date: 2019-11-16
 
 ## Introduksi
 
-Saat ini Laravel merupakan _framework_ PHP yang paling populer. Hal tersebut berdasarkan data dari jumlah pencarian Google dan StackOverflow, serta jumlah _stars_ pada GitHub. Tidak mengherankan.
+Saat ini Laravel merupakan _framework_ PHP yang paling populer. Hal tersebut berdasarkan data dari jumlah pencarian Google dan StackOverflow, serta jumlah _stars_ pada GitHub. 
 
-_Framework_ PHP yang dibandingkan adalah Laravel, Symfony, CodeIgniter, CakePHP, dan Zend Framework. 
-
-Berikut ini adalah data pencarian Google sejak tahun 2009 
+Membandingkan beberapa _framework_ PHP seperti Laravel, Symfony, CodeIgniter, CakePHP, dan Zend Framework, berikut ini adalah tren pencarian di Google sejak tahun 2009:
 
    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1982_RC01/embed_loader.js"></script>
   <script type="text/javascript">
     trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"laravel","geo":"","time":"2009-01-01 2019-11-16"},{"keyword":"Symfony","geo":"","time":"2009-01-01 2019-11-16"},{"keyword":"/m/02qgdkj","geo":"","time":"2009-01-01 2019-11-16"},{"keyword":"CakePHP","geo":"","time":"2009-01-01 2019-11-16"},{"keyword":"/m/0cdvjh","geo":"","time":"2009-01-01 2019-11-16"}],"category":0,"property":""}, {"exploreQuery":"date=2009-01-01%202019-11-16&q=laravel,Symfony,%2Fm%2F02qgdkj,CakePHP,%2Fm%2F0cdvjh","guestPath":"https://trends.google.com:443/trends/embed/"});
   </script>
 
-Selanjutnya adalah data pencarian StackOverflow berdasarkan _tag_
+Selanjutnya, kita bisa melihat data pencarian di StackOverflow berdasarkan _tag_:
 
 ![alt text](../assets/uploads/php-framework-so.svg "Logo Title Text 1")
 
-Terakhir adalah jumlah _stars_ pada GitHub sampai saat artikel ini dibuat
+Data pendukung terakhir adalah jumlah _stars_ pada GitHub sampai saat artikel ini dibuat:
 
 - [Laravel](https://github.com/laravel/laravel): __56.2k__
 - [Symfony](https://github.com/symfony/symfony): __22.1k__
@@ -33,7 +31,7 @@ Terakhir adalah jumlah _stars_ pada GitHub sampai saat artikel ini dibuat
 - [Zend Framework](https://github.com/zendframework/zendframework): __5.7k__
 
 
-Dari sekian banyak kelebihan Laravel secara teknis, secara singkat dapat diuraikan sebagai berikut:
+Dari sisi teknis, ada banyak kelebihan Laravel yang secara singkat bisa diuraikan sebagai berikut:
 
 1. Mudah untuk pemula
 2. Efisien untuk ahli
@@ -41,16 +39,16 @@ Dari sekian banyak kelebihan Laravel secara teknis, secara singkat dapat diuraik
 4. Terdapat banyak _magic_ atau _helper_ 
 5. Bisa digunakan untuk aplikasi kecil ataupun besar
 
-Masih banyak sekali alasan kenapa Laravel sangat populer di kalangan pemula sampai ahli. 
-
-Selamat datang di seri __"Laravel 6 Dasar"__!
+> Masih banyak sekali alasan kenapa Laravel sangat populer di kalangan pemula sampai ahli. Semuanya akan bisa ditemui dalam artikel berikutnya.
+>
+> Selamat datang di seri __"Laravel 6 Dasar"__!
 
 ## Tujuan
 Lalu, untuk apa kami membuat seri ini ketika dokumentasi Laravel sangat apik dan mudah dipelajari serta tutorial berkualitas tinggi banyak tersedia?
 
 Sama seperti alasan kenapa banyak sekali bahasa pemrograman yang dibuat, begitu juga dengan banyaknya _Framework_ PHP  yang bermunculan. Ada _value_ yang ingin disampaikan pada dunia, ada usaha untuk mencari solusi dari permasalahan sehari-hari. Tidak kurang dan tidak lebih. Kami berusaha membagikan pengetahuan kami dengan membuat seri yang berkualitas tinggi untuk membuat programer Laravel Indonesia yang masih pemula menjadi lebih baik. 
 
-Lisensi Laravel disebut [lisensi MIT](https://opensource.org/licenses/MIT) yang artinya kita bisa mengopi, memodifikasi, dan membuat aplikasi secara cuma-cuma dengan tanggung jawab sepenuhnya ada pada kita.
+Lisensi Laravel disebut [lisensi MIT](https://opensource.org/licenses/MIT) yang artinya kita bisa menyalin, memodifikasi, dan membuat aplikasi secara cuma-cuma dengan tanggung jawab sepenuhnya ada pada kita.
 Sehingga pada dasarnya kita bebas untuk membuat aplikasi berbasis Laravel dengan cara apapun selama hasilnya sesuai dengan kebutuhan kita atau klien. Namun ternyata hal tersebut berpotensi menjadi malapetaka ketika kita menggunakan Laravel dengan cara yang kurang tepat. Aplikasi yang dibuat menjadi lambat, tidak _secure_, bahkan terdapat banyak _bug_. Bukan salah Laravel tentunya. Hal tersebut dapat terjadi dikarenakan minimnya pengetahuan programer akan Laravel, MVC atau bahkan PHP itu sendiri tidak dikuasai dengan benar.
 
 Kami mencoba untuk membagikan pengetahuan dari pengalaman membuat berbagai aplikasi menjadi materi-materi rutin yang terstruktur dan (diharapkan) mudah dimengerti.
