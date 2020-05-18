@@ -4,6 +4,7 @@
 
 - Clone repository
 - Run `composer install`
+- Run `npm install`
 - Run `npm run watch`
 - Read https://jigsaw.tighten.co/docs/building-and-previewing/ for further information about Jigsaw
 
