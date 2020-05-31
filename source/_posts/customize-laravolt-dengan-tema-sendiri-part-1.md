@@ -24,3 +24,29 @@ composer create-project --prefer-dist laravel/laravel [nama-project] "6.*"
 ```
 
 ![Install Laravel versi 6](./../assets/uploads/customize-laravolt-dengan-tema-sendiri-part-1-1.png)
+
+Jangan lupa *setup file* ***.env*** di *project*, *lho*!
+
+## Install Laravolt
+
+Sebelum menambahkan Laravolt dengan *command line*, jangan lupa masuk ke *folder project*, ya! Setelah itu, *install* Laravolt sesuai dengan dokumentasi resminya di [https://laravolt.dev/docs/installation/](https://laravolt.dev/docs/installation/).
+
+![Install Laravolt](./../assets/uploads/customize-laravolt-dengan-tema-sendiri-part-1-3.png)
+
+![Tampilan halaman login Laravolt](./../assets/uploads/customize-laravolt-dengan-tema-sendiri-part-1-2.png)
+
+*Nah*, seperti yang telah saya jelaskan diatas. Untuk permulaan ini, mari kita fokuskan dulu untuk merubah halaman *authentication*, yakni halaman ***login, register*** dan ***forgot password***. Ekspektasi yang diharapkan adalah seperti gambar dibawah ini.
+
+![Halaman authentication template Dashkit](./../assets/uploads/customize-laravolt-dengan-tema-sendiri-part-1-6.png)
+
+## Publish files
+
+Kita akan meng-*override file* ***.blade.php*** yang digunakan oleh Laravolt di *folder vendor* ke *folder resources/views* dengan sebuah *command* yang sangat simpel:
+
+```bash
+php artisan vendor:publish --tag=laravolt-views
+```
+
+![Files hasil publikasi vendor laravolt](./../assets/uploads/customize-laravolt-dengan-tema-sendiri-part-1-8.png)
+
+*Well*, sampai disini kita bisa meng-*customize* tampilan *platform* Laravolt sesuai dengan keinginan kita dengan cara meng-*edit files* di *folder views* yang barusan kita *publish*. Nantikan *tutorial part 2*-nya hanya di ***ID Laravel***, *cheers*! 🍻
