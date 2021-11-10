@@ -47,6 +47,11 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
+    <a href="/post/review-ebook-spasi-30-tips-koding-laravel" class="block text-center py-2 px-8 text-xs bg-red-700 text-white">
+        <span class="font-bold uppercase text-yellow-400">Trending:</span>
+        <span>30 Tip Koding Laravel yang Lebih Manusiawi dan Disukai Rekan Kerjamu</span>
+        <div class="inline-block rounded border border-green-900 px-2 ml-2 bg-green-700">Baca Sekarang</div>
+    </a>
 <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
     <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
         <div class="flex items-center">
