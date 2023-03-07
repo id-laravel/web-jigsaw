@@ -23,6 +23,7 @@ foreach ($customRoutes as $row) {
 
 ### Kelebihan
 - Setiap route terdaftar secara eksplisit, akan muncul di `route:list`.
+- Validasi `GET` atau `POST` dihandle otomatis oleh Laravel.
 
 ### Kekurangan
 - Ada potensi isu ketika menjalankan `route:cache` dengan setup server yang multi instance. Penambah route di salah satu instance tidak akan terdeteksi di instance lain.
@@ -33,6 +34,7 @@ Route::any('{any}', 'App\Http\Controllers\Api\DynamicRouteHandler')->where('any'
 ```
 
 Bagian `where('any', '.*')` merupakan salah satu poin penting dari kode di atas, karena regex tersebut memungkinkan dynamic route untuk memiliki format nested:
+
 - user
 - user/active
 - organization/{org}/user/active/
@@ -41,11 +43,11 @@ Cara kedua ini bisa dioptimasi lagi, misalkan dengan menambah prefix khusus untu
 ```php
 Route::any('custom/{any}', 'App\Http\Controllers\Api\DynamicRouteHandler')->where('any', '.*');
 ```
-
+Dengan menambahkan hardcoded prefix di awal, bisa mengurangi cost yang dibutuhkan Laravel untuk mencari route yang cocok ketika framework sedang proses booting.
 
 ### Kelebihan
 - Tidak terpengaruh dengan `route:cache` maupun setup server yang multi instance.
 
 ### Kekurangan
 - Hanya satu route yang terdeteksi di `route:list`.
-- Pengecekan method `GET` atau `POST` perlu dilakukan secara manual di DynamicRouteHandler.
+- Validasi method `GET` atau `POST` perlu dilakukan secara manual di DynamicRouteHandler.
