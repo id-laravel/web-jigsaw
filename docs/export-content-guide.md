@@ -233,7 +233,7 @@ Untuk mempertahankan SEO, buat file redirect:
 
 ### Checklist
 
-- [ ] Semua artikel berhasil dimigrasi
+- [ ] Semua artikel berhasil dimigrasikan
 - [ ] Semua gambar dapat diakses
 - [ ] Syntax highlighting berfungsi
 - [ ] Internal links bekerja
@@ -247,12 +247,12 @@ Untuk mempertahankan SEO, buat file redirect:
 
 ```bash
 # Build site untuk memastikan tidak ada error
-pnpm run build
+npm run build
 
 # Jalankan di local untuk review
-pnpm run dev
+npm run dev
 
-# Check broken links
+# Check broken links (untuk situs Astro yang baru)
 npx broken-link-checker http://localhost:4321
 ```
 
