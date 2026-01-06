@@ -150,7 +150,8 @@ const matter = require('gray-matter');
 // Direktori sumber berisi file export dari situs lama
 const sourceDir = './export-data';
 // Direktori tujuan untuk situs Astro yang baru (bukan Jigsaw)
-const targetDir = './src/data/blog';
+// Astro biasanya menggunakan src/content/blog untuk content collections
+const targetDir = './src/content/blog';
 
 fs.readdirSync(sourceDir).forEach(file => {
   if (!file.endsWith('.md')) return;
@@ -245,14 +246,16 @@ Untuk mempertahankan SEO, buat file redirect:
 
 ### Testing
 
+> **Catatan**: Perintah berikut adalah untuk situs Astro yang baru, bukan untuk project Jigsaw yang saat ini. Untuk testing Jigsaw, gunakan `npm run dev` dan `./vendor/bin/jigsaw build`.
+
 ```bash
-# Build site untuk memastikan tidak ada error
+# Build site Astro untuk memastikan tidak ada error
 npm run build
 
-# Jalankan di local untuk review
+# Jalankan Astro di local untuk review
 npm run dev
 
-# Check broken links (untuk situs Astro yang baru)
+# Check broken links pada situs Astro (default port 4321)
 npx broken-link-checker http://localhost:4321
 ```
 
