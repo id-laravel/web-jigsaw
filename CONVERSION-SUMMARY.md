@@ -121,11 +121,19 @@ draft: false
 
 ## Technical Notes
 
-- Conversion script uses pure Node.js (no external dependencies)
-- Simple YAML parser handles frontmatter
+- Conversion script uses Node.js with `gray-matter` library for YAML parsing
+- Simple script with minimal dependencies (only gray-matter)
 - All dates converted to ISO 8601 format
 - Categories automatically mapped to tags
 - Default values added for new Astro fields
+
+## Dependencies
+
+To run the conversion script yourself:
+```bash
+npm install --no-save gray-matter --legacy-peer-deps
+node convert-to-mdx.js
+```
 
 ## Reference
 

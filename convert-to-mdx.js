@@ -4,13 +4,24 @@
  * Script to convert Jigsaw markdown posts to Astro MDX format
  * Based on the export guide in docs/export-content-guide.md
  * 
- * Dependencies: gray-matter (npm install gray-matter)
+ * Dependencies: 
+ *   - gray-matter (install with: npm install --no-save gray-matter --legacy-peer-deps)
+ * 
  * Usage: node convert-to-mdx.js
  */
 
 const fs = require('fs');
 const path = require('path');
-const matter = require('gray-matter');
+
+// Try to load gray-matter, provide helpful error if not available
+let matter;
+try {
+  matter = require('gray-matter');
+} catch (e) {
+  console.error('❌ Error: gray-matter is not installed');
+  console.error('   Install it with: npm install --no-save gray-matter --legacy-peer-deps');
+  process.exit(1);
+}
 
 // Convert Jigsaw frontmatter to Astro format
 function convertFrontmatter(data) {
@@ -29,15 +40,14 @@ function convertFrontmatter(data) {
 
 // Convert content from Markdown to MDX-compatible format
 function convertContent(content) {
-  let converted = content;
+  // Currently, no content transformations are needed
+  // The original content works well in MDX format
+  // Future transformations could include:
+  // - Converting HTML iframes to MDX components
+  // - Updating image paths
+  // - Converting internal links
   
-  // Convert HTML iframe to MDX component (if needed)
-  // For now, keep iframes as-is since they work in MDX
-  
-  // Ensure code blocks have proper language identifiers
-  // Add any other content transformations here
-  
-  return converted;
+  return content;
 }
 
 // Generate MDX frontmatter as YAML
@@ -88,8 +98,17 @@ function convertPost(inputPath, outputPath) {
 
 // Process all posts
 function main() {
+  // Source: Jigsaw posts directory
   const sourceDir = './source/_posts';
+  // Target: Converted MDX files directory
   const targetDir = './converted-mdx';
+  
+  // Verify source directory exists
+  if (!fs.existsSync(sourceDir)) {
+    console.error(`❌ Error: Source directory not found: ${sourceDir}`);
+    console.error('   Make sure you are running this script from the repository root');
+    process.exit(1);
+  }
   
   if (!fs.existsSync(targetDir)) {
     fs.mkdirSync(targetDir, { recursive: true });
