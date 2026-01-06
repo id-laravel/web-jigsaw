@@ -109,7 +109,7 @@ Konversi syntax highlighting:
 <!-- Format baru -->
 ```php
 <?php echo "Hello"; ?>
-\```
+```
 ```
 
 **B. Images**
@@ -224,7 +224,7 @@ Untuk mempertahankan SEO, buat file redirect:
 
 ### Checklist
 
-- [ ] Semua artikel berhasil dimigrate
+- [ ] Semua artikel berhasil dimigrasi
 - [ ] Semua gambar dapat diakses
 - [ ] Syntax highlighting berfungsi
 - [ ] Internal links bekerja
@@ -275,7 +275,8 @@ iconv -f ISO-8859-1 -t UTF-8 input.md > output.md
 **Q: Code blocks tidak ter-highlight**
 ```markdown
 # Pastikan language identifier benar
-```php  # bukan ```PHP atau ```Php
+```php
+# bukan ```PHP atau ```Php
 ```
 
 ## Resources
