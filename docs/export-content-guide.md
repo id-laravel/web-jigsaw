@@ -207,12 +207,16 @@ find src/data/blog -name "*.md" -exec sed -i 's|/old-path/|/assets/|g' {} +
 
 Untuk mempertahankan SEO, buat file redirect:
 
-```javascript
-// public/_redirects (untuk Netlify/Cloudflare Pages)
+**Untuk Netlify/Cloudflare Pages** (`public/_redirects`):
+
+```text
 /old-url-1  /new-url-1  301
 /old-url-2  /new-url-2  301
+```
 
-// Atau vercel.json
+**Untuk Vercel** (`vercel.json`):
+
+```json
 {
   "redirects": [
     { "source": "/old-url-1", "destination": "/new-url-1", "permanent": true }
@@ -273,10 +277,17 @@ iconv -f ISO-8859-1 -t UTF-8 input.md > output.md
 ```
 
 **Q: Code blocks tidak ter-highlight**
-```markdown
-# Pastikan language identifier benar
+
+Pastikan language identifier benar menggunakan huruf kecil:
+
 ```php
-# bukan ```PHP atau ```Php
+// Benar: gunakan huruf kecil
+```
+
+Bukan:
+
+```text
+// Salah: ```PHP atau ```Php
 ```
 
 ## Resources
