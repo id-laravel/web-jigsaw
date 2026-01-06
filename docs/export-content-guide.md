@@ -281,13 +281,16 @@ iconv -f ISO-8859-1 -t UTF-8 input.md > output.md
 Pastikan language identifier benar menggunakan huruf kecil:
 
 ```php
-// Benar: gunakan huruf kecil
+<?php
+// Benar: gunakan ```php (huruf kecil)
+echo "Hello World";
+?>
 ```
 
 Bukan:
 
 ```text
-// Salah: ```PHP atau ```Php
+// Salah: jangan gunakan ```PHP atau ```Php
 ```
 
 ## Resources
