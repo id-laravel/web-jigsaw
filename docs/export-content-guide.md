@@ -55,7 +55,8 @@ SELECT
   t.slug
 FROM wp_posts p
 JOIN wp_term_relationships tr ON p.ID = tr.object_id
-JOIN wp_terms t ON tr.term_taxonomy_id = t.term_id
+JOIN wp_term_taxonomy tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
+JOIN wp_terms t ON tt.term_id = t.term_id
 WHERE p.post_type = 'post';
 ```
 
@@ -73,6 +74,8 @@ wget --recursive --no-parent --convert-links https://old-site.com/blog/
 ## Konversi ke Format Astro
 
 ### 1. Format Frontmatter
+
+> **Catatan**: Format berikut adalah untuk situs Astro yang baru, bukan format Jigsaw yang saat ini digunakan. Jigsaw menggunakan `date` dan `categories`, sementara Astro menggunakan `pubDatetime`, `modDatetime`, dan `tags`.
 
 Setiap artikel harus memiliki frontmatter YAML di awal file:
 
@@ -144,7 +147,9 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
+// Direktori sumber berisi file export dari situs lama
 const sourceDir = './export-data';
+// Direktori tujuan untuk situs Astro yang baru (bukan Jigsaw)
 const targetDir = './src/data/blog';
 
 fs.readdirSync(sourceDir).forEach(file => {
