@@ -1,0 +1,28 @@
+---
+title: "Mendeteksi Ajax Request"
+description: ""
+pubDatetime: 2013-10-19T00:00:00.000Z
+author: "Bayu Hendra Winata"
+tags:
+  - ajax
+  - request
+featured: false
+draft: false
+---
+
+
+
+
+```php
+if (Request::wantsJson())
+{
+    // your beautiful code here...
+}
+
+// atau
+
+if (Request::ajax())
+{
+    // your beautiful code here...
+}
+```
