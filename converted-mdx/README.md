@@ -8,6 +8,7 @@ This directory contains all 42 blog posts converted from Jigsaw Markdown format 
 - **Target Format**: Astro MDX (`.mdx`) with standard YAML frontmatter
 - **Total Posts Converted**: 42
 - **Conversion Date**: 2026-01-06
+- **Conversion Tool**: gray-matter (proper YAML parser)
 
 ## Frontmatter Changes
 
@@ -45,6 +46,7 @@ draft: false
    - `date` → `pubDatetime` (ISO 8601 format)
    - Added `description`, `featured`, and `draft` fields
    - Removed Jigsaw-specific fields (`extends`, `section`)
+   - Properly handles titles with special characters (colons, quotes)
 
 2. **Content**:
    - Preserved all original content including HTML elements (iframes, etc.)
@@ -66,10 +68,11 @@ These MDX files are ready to be used in an Astro project. To use them:
 ## Conversion Script
 
 The conversion was performed using `convert-to-mdx.js` script which:
-- Parses Jigsaw frontmatter
-- Transforms to Astro-compatible format
+- Uses `gray-matter` for robust YAML parsing
+- Transforms frontmatter to Astro-compatible format
 - Preserves all content and formatting
 - Generates valid MDX files
+- Handles edge cases (titles with colons, special characters)
 
 ## Next Steps
 

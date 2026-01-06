@@ -3,41 +3,14 @@
 /**
  * Script to convert Jigsaw markdown posts to Astro MDX format
  * Based on the export guide in docs/export-content-guide.md
+ * 
+ * Dependencies: gray-matter (npm install gray-matter)
+ * Usage: node convert-to-mdx.js
  */
 
 const fs = require('fs');
 const path = require('path');
-
-// Parse frontmatter manually (simple YAML parser)
-function parseFrontmatter(content) {
-  const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) {
-    return { data: {}, content: content };
-  }
-
-  const frontmatter = match[1];
-  const body = match[2];
-  
-  const data = {};
-  const lines = frontmatter.split('\n');
-  
-  for (let line of lines) {
-    if (line.includes(':')) {
-      const colonIndex = line.indexOf(':');
-      const key = line.substring(0, colonIndex).trim();
-      let value = line.substring(colonIndex + 1).trim();
-      
-      // Handle arrays
-      if (value.startsWith('[') && value.endsWith(']')) {
-        value = value.slice(1, -1).split(',').map(v => v.trim());
-      }
-      
-      data[key] = value;
-    }
-  }
-  
-  return { data, content: body };
-}
+const matter = require('gray-matter');
 
 // Convert Jigsaw frontmatter to Astro format
 function convertFrontmatter(data) {
@@ -88,7 +61,7 @@ function generateMDXFrontmatter(data) {
 function convertPost(inputPath, outputPath) {
   try {
     const content = fs.readFileSync(inputPath, 'utf8');
-    const { data, content: body } = parseFrontmatter(content);
+    const { data, content: body } = matter(content);
     
     // Convert frontmatter
     const astroData = convertFrontmatter(data);
